@@ -1,0 +1,28 @@
+.button {
+  display: block;
+  padding: 14px 13px 14px 11px;
+  width: 180px;
+
+  font-family: $second-font;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: inherit;
+
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+
+  &--call {
+    &:hover {
+      background-color: $light-blue;
+    }
+
+    &:active {
+      background-color: rgba($light-blue, 0.8);
+    }
+  }
+}

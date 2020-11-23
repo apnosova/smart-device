@@ -1,6 +1,32 @@
+/* Breakpoints */
+
 $desktop-width: 1024px;
 $tablet-width: 1023px;
 $mobile-width: 767px;
+
+/* Colors */
+
+$deep-cyan-blue: #1b2d37;
+$medium-gray: #666666;
+$white: #ffffff;
+$light-blue: #00b2ff;
+
+/* Font Colors */
+$font-gray: $medium-gray;
+$font-white: $white;
+
+
+/* Background */
+
+$bg-dark: $deep-cyan-blue;
+$bg-blue: $light-blue;
+$bg-white: $white;
+
+/* Fonts */
+
+$main-font: "PT Mono", "Courier", monospace;
+$second-font: "Roboto Condensed", "Arial", sans-serif;
+
 
 $retina-dpi: 144dpi;
 $retina-dppx: 1.5dppx;
