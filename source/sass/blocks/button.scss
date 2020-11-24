@@ -13,16 +13,60 @@
   color: inherit;
 
   background-color: transparent;
-  border: 1px solid #ffffff;
   border-radius: 5px;
 
+  cursor: pointer;
+
   &--call {
+    border: 1px solid $bg-white;
+
     &:hover {
-      background-color: $light-blue;
+      background-color: $bg-blue;
     }
 
     &:active {
-      background-color: rgba($light-blue, 0.8);
+      background-color: rgba($bg-blue, 0.8);
+    }
+  }
+
+  &--consult {
+    width: 407px;
+    padding: 17px 28px 17px;
+
+    font-family: $second-font;
+    font-weight: bold;
+    font-size: inherit;
+    line-height: 1.19;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+
+    background-color: $bg-blue;
+    border: 1px solid $bg-blue;
+
+    &:hover {
+      background-color: $bg-dark;
+      border: 1px solid $bg-white;
+    }
+
+    &:active {
+      border: 1px solid $bg-blue;
+    }
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .button {
+    &--consult {
+      width: 379px;
+    }
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .button {
+    &--consult {
+      width: auto;
     }
   }
 }

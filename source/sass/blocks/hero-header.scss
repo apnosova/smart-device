@@ -1,0 +1,148 @@
+.hero-header {
+  min-height: 515px;
+  margin-top: auto;
+  padding-bottom: 89px;
+}
+
+.hero-header h1 {
+  margin: 0;
+  margin-bottom: 27px;
+  margin-left: -5px;
+  width: 60%;
+
+  font-family: $second-font;
+  font-weight: bold;
+  font-size: 80px;
+  line-height: 1.18;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.hero-header p {
+  position: relative;
+
+  margin: 0;
+  padding-left: 94px;
+  width: 50%;
+
+  font-size: 22px;
+  line-height: 1.55;
+
+  &::before {
+    @include pseudo (25%, -2px, 66px, 2px);
+
+    background-color: $bg-white;
+  }
+}
+
+.hero-header__scroll-link {
+  display: inline-block;
+  margin-top: 140px;
+  margin-left: -40px;
+
+  font-size: 14px;
+  line-height: 1.14px;
+  color: inherit;
+
+  opacity: 0.5;
+
+  transform: rotate(-90deg);
+
+  &:hover {
+    color: $font-blue;
+  }
+
+  &:active {
+    color: rgba($font-blue, 0.8);
+  }
+}
+
+.hero-header__consult-link {
+  margin-top: 45px;
+  margin-left: 94px;
+}
+
+.hero-header__mobile-link {
+  display: none;
+}
+
+@media (max-width: $tablet-width) {
+  .hero-header {
+    padding-left: 65px;
+    min-height: 470px;
+  }
+
+  .hero-header h1 {
+    margin-bottom: 28px;
+
+    font-size: 60px;
+    line-height: 1.17;
+  }
+
+  .hero-header p {
+    padding-left: 47px;
+    width: 60%;
+
+    font-size: 18px;
+    line-height: 1.57;
+
+    &::before {
+      top: 29%;
+
+      width: 33px;
+    }
+  }
+
+  .hero-header__scroll-link {
+    display: none;
+  }
+
+  .hero-header__consult-link {
+    margin-top: 55px;
+    margin-left: 48px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .hero-header {
+    padding-left: 0;
+    min-height: 280px;
+    padding-bottom: 0;
+  }
+
+  .hero-header h1 {
+    width: auto;
+    margin-left: 0;
+
+    font-size: 40px;
+    line-height: 1.18;
+  }
+
+  .hero-header p {
+    width: auto;
+    padding-left: 50px;
+
+    font-size: 16px;
+
+    &::before {
+      top: 23%;
+      left: 2px;
+    }
+  }
+
+  .hero-header__consult-link {
+    margin-left: 0;
+    margin-top: 42px;
+  }
+
+  .hero-header__desktop-link {
+    display: none;
+    margin: 0 auto;
+    margin-left: 0;
+  }
+
+  .hero-header__mobile-link {
+    display: inline-block;
+  }
+}
+

@@ -18,17 +18,13 @@
 
   &:hover {
     color: $light-blue;
-
-    path {
-      fill: $bg-white;
-    }
   }
 
   &:active {
-    color: rgba($light-blue, 0.8);
+    color: rgba($bg-blue, 0.8);
 
     path {
-      fill: rgba($bg-white, 0.8);
+      fill: rgba($bg-blue, 0.8);
     }
   }
 }
@@ -57,7 +53,10 @@
 
   .contacts__item {
     padding: 0;
-    margin-left: 33px;
+
+    &:not(:first-child) {
+      margin-left: 33px;
+    }
   }
 
   .contacts__text {
@@ -81,6 +80,8 @@
 
 @media (max-width: $mobile-width) {
   .contacts__item {
-    margin-left: 23px;
+    &:not(:first-child) {
+      margin-left: 23px;
+    }
   }
 }
