@@ -12,3 +12,18 @@
   width: $width;
   height: $height;
 }
+
+@mixin section-title {
+  font-family: $second-font;
+  font-size: 36px;
+  line-height: 1.42;
+
+  @media (max-width: $tablet-width) {
+    font-size: 32px;
+    line-height: 1.41;
+  }
+
+  @media (max-width: $mobile-width) {
+    font-size: 28px;
+  }
+}

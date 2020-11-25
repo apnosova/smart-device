@@ -53,6 +53,21 @@
       border: 1px solid $bg-blue;
     }
   }
+
+  &--more {
+    color: $font-blue;
+
+    background-color: $white;
+    border: 1px solid $bg-blue;
+
+    &:hover {
+      opacity: 0.5;
+    }
+
+    &:active {
+      opacity: 0.8;
+    }
+  }
 }
 
 @media (max-width: $tablet-width) {
