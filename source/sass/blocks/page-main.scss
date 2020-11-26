@@ -1,3 +1,28 @@
 .page-main {
   flex: 1 0 auto;
 }
+
+.page-main__wrapper {
+  z-index: -1;
+  min-height: 1113px;
+
+  background-image: url("../img/features-triangular-bg.svg");
+  background-position: center bottom 60%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: $tablet-width) {
+  .page-main__wrapper {
+    background-image: url("../img/features-polygon.svg");
+    background-position: right top 37%;
+    background-repeat: no-repeat;
+    background-size: 560px auto;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .page-main__wrapper {
+    background-image: none;
+  }
+}

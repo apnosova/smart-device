@@ -79,38 +79,36 @@
   }
 
   .features__item {
-    padding: 23px 21px 22px 23px;
+    display: flex;
+    flex-direction: column;
+    padding: 24px 21px 25px 23px;
     width: 48%;
-    min-height: auto;
+    min-height: 232px;
 
     &:not(:nth-last-child(-n+2)) {
-      margin-bottom: 32px;
+      margin-bottom: 30px;
     }
 
     &:not(:nth-child(2n)) {
       margin-right: 4%;
     }
-
-    &:last-child {
-      min-height: 232px;
-    }
   }
 
   .features h3 {
-    margin-bottom: 10px;
+    margin-bottom: 9px;
   }
 
   .features__icon {
-    margin-bottom: 4px;
+    margin-bottom: 7px;
 
     &--hired,
     &--tag {
       width: 32px;
-      height: 32px;
+      height: 33px;
     }
 
     &--detective {
-      margin-bottom: 10px;
+      margin-bottom: 14px;
       width: 30px;
       height: 26px;
     }
@@ -120,13 +118,14 @@
 @media (max-width: $mobile-width) {
   .features {
     padding-top: 37px;
-    width: calc(100% - 28px);
+    width: calc(100% - 30px);
+    min-height: auto;
   }
 
   .features__item {
     padding-top: 24px;
-    padding-bottom: 27px;
-    padding-right: 19px;
+    padding-bottom: 24.5px;
+    padding-right: 10px;
     margin-bottom: 0;
     width: 100%;
 
@@ -134,17 +133,17 @@
       margin-right: 0;
     }
 
-    &:last-child {
-      min-height: auto;
-    }
-
     &:not(:last-child) {
       margin-bottom: 20px;
+    }
+
+    &:first-child {
+      max-width: 95%;
     }
   }
 
   .features h3 {
-    margin-bottom: 11px;
+    margin-bottom: 10px;
     max-width: 95%;
 
     font-size: 20px;
@@ -152,10 +151,6 @@
   }
 
   .features__icon {
-    margin-bottom: 7px;
-  }
-
-  .features__item--detective h3 {
-    margin-bottom: 18px;
+    margin-bottom: 14px;
   }
 }

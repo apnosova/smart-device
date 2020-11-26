@@ -22,7 +22,6 @@
   margin-bottom: 21px;
 
   @include section-title;
-  font-weight: normal;
   color: $font-gray;
 }
 
@@ -43,7 +42,7 @@
 
 @media (max-width: $tablet-width) {
   .about {
-    padding-top: 25px;
+    padding-top: 26px;
     padding-left: 186px;
     padding-bottom: 83px;
     width: calc(100% - 50px);
@@ -65,7 +64,7 @@
     max-width: 100%;
 
     &:not(:last-of-type) {
-      margin-bottom: 44px;
+      margin-bottom: 21px;
     }
   }
 
@@ -74,14 +73,14 @@
   }
 
   .about__more-button {
-    margin-top: 43px;
+    margin-top: 42px;
   }
 }
 
 @media (max-width: $mobile-width) {
   .about {
     padding-left: 0;
-    padding-top: 27px;
+    padding-top: 28px;
     padding-bottom: 65px;
     width: calc(100% - 32px);
     padding-right: 0;
@@ -92,7 +91,13 @@
   }
 
   .about h2 {
-    margin-bottom: 19px;
+    margin-bottom: 21px;
+  }
+
+  .about p {
+    &:not(:last-of-type) {
+      margin-bottom: 43px;
+    }
   }
 
   .about__more-button {
