@@ -1,37 +1,43 @@
 .feedback {
   background-color: $bg-blue;
 
-  //background-image: url("../img/form-triangular-bg.svg");
-  //background-position: center bottom;
-  //background-repeat: no-repeat;
+  background-image: url("../img/form-triangular-bg.svg");
+  background-position: calc(50% + 160px) 61%;
+  background-repeat: no-repeat;
 }
 
 .feedback__inner {
   position: relative;
 
+  padding-top: 92px;
+  padding-bottom: 113px;
   width: calc(100% - 70px);
   max-width: 1170px;
   margin: 0 auto;
-  padding-top: 92px;
-  padding-bottom: 113px;
 
-  //&::before {
-  //@include pseudo(23%, -2%, 511px, 288px);
+  &::before {
+    position: absolute;
 
-  //background-image: url("../img/paper-airplane@1x.png");
+    @include pseudo(24%, auto, 511px, 288px);
+    right: 58.5%;
 
-  //@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-  //background-image: url("../img/paper-airplane@2x.png");
-  //}
-  //}
+    background-image: url("../img/paper-airplane@1x.png");
+    background-position: 25% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+    //@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    //background-image: url("../img/paper-airplane@2x.png");
+    //}
+  }
 }
 
 .feedback__content {
-  max-width: 571px;
-  position: relative;
-
+  width: 571px;
   margin-left: auto;
 }
+
 
 .feedback__content h2 {
   margin: 0;
@@ -48,32 +54,143 @@
 .feedback__wrapper {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 40px;
+  align-items: center;
 }
 
-.feedback__field {
-  width: 47.3%;
-}
-
-.feedback__field input {
-  padding: 17px 18px;
-  width: 100%;
-
+.feedback__field input,
+.feedback__field textarea {
   font-family: inherit;
   font-size: inherit;
 
   background-color: rgba(255, 255, 255, 0.1);
   border: none;
+}
+
+.feedback__field input {
+  padding: 16px 18px;
+  margin-bottom: 40px;
+  width: 270px;
 
   &::placeholder {
     color: $font-white;
   }
 }
 
-.feedback textarea {
+.feedback__field textarea {
+  padding: 14px 18px;
+  margin-bottom: 40px;
+  width: 100%;
+  height: 154px;
+
+  color: $font-white;
+
   resize: none;
 }
 
-.feedback__button {
-  margin-top: 43px;
+.feedback__checkbox {
+  display: flex;
+  width: 262px;
+}
+
+.feedback__checkbox label {
+  padding-left: 14px;
+
+  font-size: 14px;
+  line-height: 16px;
+
+  color: #ffffff;
+
+  opacity: 0.8;
+}
+
+@media (max-width: $tablet-width) {
+  .feedback {
+    background-image: none;
+  }
+
+  .feedback__inner {
+    padding-top: 78px;
+    padding-bottom: 103px;
+    width: 100%;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .feedback__content {
+    width: 591px;
+    margin: 0 auto;
+  }
+
+  .feedback__content h2 {
+    margin-bottom: 18px;
+  }
+
+  .feedback p {
+    margin-bottom: 52px;
+  }
+
+  .feedback__field input {
+    padding-bottom: 19px;
+    width: 279px;
+  }
+
+  .feedback textarea {
+    margin-bottom: 42px;
+    height: 160px;
+  }
+
+  .feedback__checkbox {
+    width: 272px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .feedback__inner {
+    padding-top: 30px;
+    padding-bottom: 41px;
+    width: calc(100% - 32px);
+  }
+
+  .feedback__wrapper {
+    flex-direction: column;
+  }
+
+  .feedback__content {
+    width: 100%;
+  }
+
+  .feedback__content h2 {
+    margin-bottom: 13px;
+  }
+
+  .feedback__content p {
+    margin-bottom: 25px;
+  }
+
+  .feedback__field {
+    width: 100%;
+  }
+
+  .feedback__field input {
+    margin-bottom: 29px;
+    width: 100%;
+  }
+
+  .feedback__field textarea {
+    margin-bottom: 25px;
+    height: 104px;
+  }
+
+  .feedback__button {
+    margin-top: 0;
+    margin-bottom: 31px;
+    width: 100%;
+  }
+
+  .feedback__checkbox {
+    margin-top: 0;
+    width: 100%;
+  }
 }
