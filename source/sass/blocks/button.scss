@@ -17,7 +17,7 @@
 
   cursor: pointer;
 
-  &--call {
+  &--call-back {
     border: 1px solid $bg-white;
 
     &:hover {
@@ -31,7 +31,7 @@
 
   &--consult {
     width: 407px;
-    padding: 17px 28px 17px;
+    padding: 16px 28px 18px;
 
     font-size: inherit;
     line-height: 1.19;
@@ -50,6 +50,9 @@
   }
 
   &--more {
+    padding-top: 14px;
+    padding-bottom: 14px;
+
     color: $font-blue;
 
     background-color: $white;
@@ -65,9 +68,16 @@
   }
 
   &--feedback {
-    padding-top: 14px;
-    padding-bottom: 14px;
+    padding-top: 13px;
+    padding-bottom: 15px;
     width: 270px;
+
+    border: 1px solid $bg-white;
+  }
+
+  &--modal {
+    width: 100%;
+    padding-bottom: 15px;
 
     border: 1px solid $bg-white;
   }

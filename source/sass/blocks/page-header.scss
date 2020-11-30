@@ -1,12 +1,12 @@
 .page-header {
   background-color: $bg-dark;
-  background-image: url("../img/header-bg-desktop@1x.png");
-  background-position: center;
+  background-image: url("../img/header-bg-desktop@1x.png"), url("../img/circuit-boards-desktop@1x.png"), url("../img/header-triangular-bg.svg");
+  background-position: center, calc(50% + 430px) 71%, calc(50% + 405px) 50%;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover, 705px 515px, auto;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/header-bg-desktop@2x.png");
+    background-image: url("../img/header-bg-desktop@2x.png"), url("../img/circuit-boards-desktop@2x.png"), url("../img/header-triangular-bg.svg"),;
   }
 }
 
@@ -17,19 +17,18 @@
   max-width: 1411px;
   min-height: 880px;
   margin: 0 auto;
-  padding-bottom: 38px;
 }
 
 @media (max-width: $tablet-width) {
   .page-header {
     background-color: $bg-dark;
-    background-image: url("../img/header-bg-tablet@1x.png");
-    background-position: center;
+    background-image: url("../img/header-bg-tablet@1x.png"), url("../img/circuit-boards-tablet@1x.png"), url("../img/header-triangular-bg.svg");
+    background-position: center, calc(50% + 357px) 32.5%, calc(50% + 320px) -38px;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover, 465px 340px, 557px 504px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/header-bg-tablet@2x.png");
+      background-image: url("../img/header-bg-tablet@2x.png"), url("../img/circuit-boards-tablet@2x.png"), url("../img/header-triangular-bg.svg");
     }
   }
 
@@ -43,13 +42,13 @@
 @media (max-width: $mobile-width) {
   .page-header {
     background-color: $bg-dark;
-    background-image: url("../img/header-bg-mobile@1x.png");
-    background-position: center;
+    background-image: url("../img/header-bg-mobile@1x.png"), url("../img/circuit-boards-mobile@1x.png"), url("../img/header-triangular-bg.svg");
+    background-position: center, calc(50% + 16px) 21.5%, calc(50% + 243px) -44px;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover, 301px 220px, 506px 480px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/header-bg-tablet@2x.png");
+      background-image: url("../img/header-bg-tablet@2x.png"), url("../img/circuit-boards-mobile@2x.png"), url("../img/header-triangular-bg.svg");
     }
   }
 

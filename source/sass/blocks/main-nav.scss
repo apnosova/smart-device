@@ -1,81 +1,83 @@
 .main-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 77.5%;
+  width: 46%;
+
+  color: rgba($font-dark, 0.5);
 }
 
-.main-nav__wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 675px;
-  min-width: 600px;
-  width: 61.7%;
+.main-nav h2 {
+  margin: 0;
+  margin-bottom: 25px;
+  margin-left: 3px;
+
+  font-family: $second-font;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.07;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
-.main-nav__toggle {
-  position: relative;
+.main-nav__list {
+  display: flex;
+}
 
-  display: inline-block;
-  padding: 14px;
-  width: 37px;
-  height: 13px;
+.main-nav__col {
+  @include list-reset;
+  min-width: 145px;
 
-  background-color: transparent;
-  border: none;
-
-  cursor: pointer;
-
-  &::before {
-    @include pseudo (8px, 0, 37px, 1px);
-
-    background-color: $bg-white;
-    box-shadow: 0 12px 0 0 $bg-white;
+  &:not(:last-child) {
+    margin-right: 16.2%;
   }
 
-  &:hover::before {
-    background-color: $bg-blue;
-    box-shadow: 0 12px 0 0 $bg-blue;
+  &:last-child {
+    letter-spacing: 0.03em;
   }
+}
 
-  &:active::before {
-    background-color: rgba($bg-blue, 0.8);
-    box-shadow: 0 12px 0 0 rgba($bg-blue, 0.8);
-  }
+.main-nav__item {
+  font-size: 15px;
+  line-height: 1.67;
+}
+
+.main-nav__link {
+  color: rgba($font-dark, 0.5);
 }
 
 @media (max-width: $tablet-width) {
   .main-nav {
-    width: 50%;
-    justify-content: flex-end;
+    width: 40%;
   }
 
-  .main-nav__wrapper {
-    width: auto;
-    max-width: auto;
-    min-width: auto;
+  .main-nav__list {
+    flex-direction: column;
   }
 
-  .main-nav__call-button {
-    display: none;
-  }
-
-  .main-nav__toggle {
-    margin-right: 36px;
-
-    &::before {
-      top: 5px;
+  .main-nav__col {
+    &:last-child {
+      letter-spacing: normal;
     }
+  }
+
+  .main-nav h2 {
+    margin-left: 0;
+    margin-bottom: 25px;
   }
 }
 
 @media (max-width: $mobile-width) {
   .main-nav {
-    width: 70%;
+    position: relative;
+
+    width: 100%;
+    padding-top: 29px;
+    padding-bottom: 28px;
+
+    &::before {
+      @include pseudo-border-gray;
+    }
   }
 
-  .main-nav__toggle {
-    margin-right: 28px;
+  .main-nav h2 {
+    margin-bottom: 33px;
   }
 }

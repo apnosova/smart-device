@@ -30,14 +30,14 @@
   max-width: 98%;
 
   &:not(:last-of-type) {
-    margin-bottom: 23px;
+    margin-bottom: 22px;
   }
 
   color: $font-gray;
 }
 
 .about__more-button {
-  margin-top: 39px;
+  margin-top: 40px;
 }
 
 @media (max-width: $tablet-width) {

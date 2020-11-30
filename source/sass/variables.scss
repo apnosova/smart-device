@@ -4,17 +4,21 @@ $desktop-width: 1024px;
 $tablet-width: 1023px;
 $mobile-width: 767px;
 
+$modal-width: 490px;
+
 /* Colors */
 
 $deep-cyan-blue: #1b2d37;
 $medium-gray: #666666;
 $white: #ffffff;
 $light-blue: #00b2ff;
+$dark-bluish-gray:  #626962;
 
 /* Font Colors */
 $font-gray: $medium-gray;
 $font-white: $white;
 $font-blue: $light-blue;
+$font-dark: $deep-cyan-blue;
 
 
 /* Background */
@@ -22,6 +26,9 @@ $font-blue: $light-blue;
 $bg-dark: $deep-cyan-blue;
 $bg-blue: $light-blue;
 $bg-white: $white;
+
+/* Border */
+$bg-gray: rgba($dark-bluish-gray, 0.2);
 
 /* Fonts */
 

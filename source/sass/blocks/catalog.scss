@@ -6,7 +6,7 @@
   width: calc(100% - 70px);
   max-width: 1170px;
   margin: 0 auto;
-  padding-top: 90px;
+  padding-top: 89px;
   padding-bottom: 127px;
 }
 
@@ -72,7 +72,7 @@
 
 .catalog h2 {
   margin: 0;
-  margin-bottom: 50px;
+  margin-bottom: 51px;
 
   @include section-title;
 }
@@ -105,7 +105,7 @@
 .catalog__item h3 {
   margin: 0;
   max-width: 58%;
-  padding-top: 52px;
+  padding-top: 51px;
   padding-left: 44px;
   padding-bottom: 52px;
 
@@ -135,7 +135,7 @@
     min-height: 256px;
 
     &:not(:last-child) {
-      margin-bottom: 46px;
+      margin-bottom: 45px;
     }
 
     background-position: center;

@@ -1,0 +1,15 @@
+.socials {
+  @include list-reset;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.socials__item {
+  &:not(:last-child) {
+    margin-right: 15px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+
+}

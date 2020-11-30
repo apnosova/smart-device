@@ -1,0 +1,64 @@
+.footer-contacts {
+  width: 40%;
+  max-width: 335px;
+
+  color: rgba($font-dark, 0.5);
+}
+
+.footer-contacts__wrapper {
+  font-size: 15px;
+  line-height: 1.67;
+
+  color: ($font-dark, 0.5);
+}
+
+.footer-contacts__list {
+  @include list-reset;
+}
+
+.footer-contacts h2 {
+  margin: 0;
+  margin-bottom: 25px;
+
+  font-family: $second-font;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.07;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.footer-contacts p {
+  margin: 0;
+}
+
+.footer-contacts__link {
+  color: inherit;
+}
+
+@media (max-width: $tablet-width) {
+  .footer-contacts {
+    width: 48%;
+    padding-right: 5px;
+    max-width: 100%;
+  }
+
+  .footer-contacts h2 {
+    margin-left: 3px;
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .footer-contacts {
+    position: relative;
+
+    width: 100%;
+    padding-top: 29px;
+    padding-bottom: 28px;
+
+    &::before {
+      @include pseudo-border-gray;
+    }
+  }
+}

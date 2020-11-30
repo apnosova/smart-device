@@ -1,12 +1,13 @@
 .hero-header {
-  min-height: 515px;
+  min-height: 659px;
   margin-top: auto;
-  padding-bottom: 89px;
+  padding-bottom: 92px;
+  padding-top: 92px;
 }
 
 .hero-header h1 {
   margin: 0;
-  margin-bottom: 27px;
+  margin-bottom: 29px;
   margin-left: -5px;
   width: 60%;
 
@@ -29,16 +30,19 @@
   line-height: 1.55;
 
   &::before {
-    @include pseudo (25%, -2px, 66px, 2px);
+    @include pseudo (18px, -2px, 66px, 2px);
 
     background-color: $bg-white;
   }
 }
 
 .hero-header__scroll-link {
+  position: relative;
+  top: 92px;
+  left: 7px;
+
   display: inline-block;
-  margin-top: 140px;
-  margin-left: -40px;
+  margin-top: 93px;
 
   font-size: 14px;
   line-height: 1.14px;
@@ -47,6 +51,7 @@
   opacity: 0.5;
 
   transform: rotate(-90deg);
+  transform-origin: 0 100%;
 
   &:hover {
     color: $font-blue;
@@ -57,7 +62,7 @@
   }
 }
 
-.hero-header__consult-button {
+.hero-header__button {
   margin-top: 45px;
   margin-left: 94px;
 }
@@ -97,7 +102,7 @@
     display: none;
   }
 
-  .hero-header__consult-button {
+  .hero-header__button {
     margin-top: 55px;
     margin-left: 48px;
   }
@@ -112,6 +117,7 @@
 
   .hero-header h1 {
     width: auto;
+    max-width: 80%;
     margin-left: 0;
 
     font-size: 40px;
@@ -120,6 +126,7 @@
 
   .hero-header p {
     width: auto;
+    max-width: 300px;
     padding-left: 50px;
 
     font-size: 16px;
@@ -130,7 +137,7 @@
     }
   }
 
-  .hero-header__consult-button {
+  .hero-header__button {
     margin-left: 0;
     margin-top: 42px;
   }
