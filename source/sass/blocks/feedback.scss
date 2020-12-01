@@ -7,17 +7,14 @@
   background-repeat: no-repeat;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: initial, url("../img/paper-airplane@2x.png");
+    background-image: url("../img/paper-airplane@2x.png"), url("../img/form-triangular-bg.svg");
   }
 }
 
 .feedback__inner {
   padding-top: 92px;
   padding-bottom: 113px;
-  width: calc(100% - 70px);
-  padding-left: 0;
   max-width: 1170px;
-  margin: 0 auto;
 }
 
 .feedback__content {
@@ -51,16 +48,18 @@
 
   background-color: rgba(255, 255, 255, 0.1);
   border: none;
+
+  color: $font-white;
+
+  &::placeholder {
+    color: $font-white;
+  }
 }
 
 .feedback__field input {
   padding: 16px 18px;
   margin-bottom: 41px;
   width: 270px;
-
-  &::placeholder {
-    color: $font-white;
-  }
 }
 
 .feedback__field textarea {
@@ -69,23 +68,61 @@
   width: 100%;
   height: 154px;
 
-  color: $font-white;
-
   resize: none;
+  overflow: auto;
 }
 
 .feedback__checkbox {
+  position: relative;
+
   display: flex;
   width: 262px;
 }
 
 .feedback__checkbox label {
-  padding-left: 12px;
+  display: block;
+  padding-left: 32px;
 
   font-size: 14px;
   line-height: 1.14;
 
   color: rgba($font-white, 0.8);
+}
+
+.feedback__checkbox input + label::before {
+  @include pseudo(2px, 0, 16px, 16px);
+
+  border: 1px solid $bg-white;
+
+  cursor: pointer;
+}
+
+.feedback__checkbox input:checked + label::before {
+  @include pseudo(2px, 0, 16px, 16px);
+
+  border: 1px solid $bg-white;
+  background-image: url("../img/icon-tick.svg");
+  background-repeat: no-repeat;
+  background-position: 3px 4px;
+
+  cursor: pointer;
+}
+
+.feedback__checkbox input:focus + label::before {
+  outline: 2px solid black;
+}
+
+.feedback__checkbox input:checked:focus + label::before {
+  outline: 2px solid black;
+}
+
+.feedback input:hover,
+.feedback textarea:hover {
+  outline: 1px solid $bg-white;
+}
+
+.feedback__checkbox input:hover + label {
+  color: rgba(255, 255, 255, 1);
 }
 
 @media (max-width: $tablet-width) {
@@ -94,9 +131,8 @@
   }
 
   .feedback__inner {
-    padding-top: 78px;
+    padding-top: 80px;
     padding-bottom: 103px;
-    width: 100%;
 
     &::before {
       display: none;
@@ -109,7 +145,7 @@
   }
 
   .feedback__content h2 {
-    margin-bottom: 18px;
+    margin-bottom: 16px;
   }
 
   .feedback p {
@@ -122,12 +158,16 @@
   }
 
   .feedback__field textarea {
-    margin-bottom: 40px;
+    margin-bottom: 41px;
     height: 160px;
   }
 
   .feedback__checkbox {
-    width: 272px;
+    width: 270px;
+  }
+
+  .feedback__checkbox label {
+    padding-left: 34px;
   }
 }
 
@@ -135,7 +175,6 @@
   .feedback__inner {
     padding-top: 30px;
     padding-bottom: 44px;
-    width: calc(100% - 32px);
   }
 
   .feedback__wrapper {
@@ -170,7 +209,7 @@
 
   .feedback__button {
     margin-top: 0;
-    margin-bottom: 31px;
+    margin-bottom: 32px;
     width: 100%;
   }
 

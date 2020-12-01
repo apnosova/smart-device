@@ -10,6 +10,14 @@
   }
 }
 
-@media (max-width: $tablet-width) {
+.socials__link {
+  fill: #cdcdcd;
+}
 
+.socials__link:hover {
+  fill: $bg-blue;
+}
+
+.socials__link:active {
+  opacity: 0.8;
 }

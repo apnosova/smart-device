@@ -41,6 +41,14 @@
 
 .main-nav__link {
   color: rgba($font-dark, 0.5);
+
+  &:hover {
+    color: $font-blue;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
 }
 
 @media (max-width: $tablet-width) {
@@ -67,10 +75,8 @@
 @media (max-width: $mobile-width) {
   .main-nav {
     position: relative;
-
     width: 100%;
-    padding-top: 29px;
-    padding-bottom: 28px;
+
 
     &::before {
       @include pseudo-border-gray;
@@ -78,6 +84,13 @@
   }
 
   .main-nav h2 {
-    margin-bottom: 33px;
+    padding-top: 29px;
+    padding-bottom: 28px;
+    margin-bottom: 0;
+  }
+
+  .main-nav__list {
+    padding-top: 3px;
+    padding-bottom: 27px;
   }
 }

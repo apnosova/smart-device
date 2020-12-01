@@ -1,0 +1,64 @@
+.accordion__button {
+  display: none;
+}
+
+@media (max-width: $mobile-width-only) {
+  .accordion__item {
+    position: relative;
+  }
+
+  .accordion__button {
+    position: absolute;
+    top: 29px;
+    right: 2px;
+
+    display: block;
+    width: 16px;
+    height: 16px;
+
+    background-color: transparent;
+    border: none;
+
+    &::before {
+      @include pseudo(7px, 0, 16px, 1px);
+
+      background-color: #c4c4c4;
+    }
+
+    &::after {
+      @include pseudo(7px, 0, 16px, 1px);
+
+      background-color: #c4c4c4;
+
+      transform: rotate(90deg);
+    }
+
+    &:active::before,
+    &:active::after {
+      background-color: $bg-blue;
+    }
+  }
+
+  .accordion__item--active .accordion__button {
+    &::after {
+      display: none;
+    }
+  }
+
+
+  .accordion__panel {
+    display: none;
+  }
+
+  .accordion__item--active .accordion__panel {
+    display: block;
+  }
+
+  .accordion__item--nojs .accordion__button {
+    display: none;
+  }
+
+  .accordion__item--nojs .accordion__panel {
+    display: block;
+  }
+}

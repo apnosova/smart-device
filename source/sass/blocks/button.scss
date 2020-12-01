@@ -45,11 +45,11 @@
     }
 
     &:active {
-      border: 1px solid $bg-blue;
+      opacity: 0.8;
     }
   }
 
-  &--more {
+  &--more-details {
     padding-top: 14px;
     padding-bottom: 14px;
 
@@ -59,7 +59,8 @@
     border: 1px solid $bg-blue;
 
     &:hover {
-      opacity: 0.5;
+      background-color: $bg-blue;
+      color: $font-white;
     }
 
     &:active {
@@ -69,10 +70,18 @@
 
   &--feedback {
     padding-top: 13px;
-    padding-bottom: 15px;
     width: 270px;
 
     border: 1px solid $bg-white;
+
+    &:hover {
+      color: $font-blue;
+      background-color: $bg-white;
+    }
+
+    &:active {
+      opacity: 0.8;
+    }
   }
 
   &--modal {
@@ -80,6 +89,15 @@
     padding-bottom: 15px;
 
     border: 1px solid $bg-white;
+
+    &:hover {
+      background-color: $bg-white;
+      color: $font-blue;
+    }
+
+    &:active {
+      opacity: 0.8;
+    }
   }
 }
 
@@ -90,7 +108,7 @@
     }
 
     &--feedback {
-      padding-top: 15px;
+      padding-bottom: 15px;
       width: 280px;
     }
   }

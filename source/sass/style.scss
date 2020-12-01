@@ -2,12 +2,13 @@
 @import "../sass/variables.scss";
 @import "../sass/mixins.scss";
 @import "../sass/scaffolding.scss";
-@import "../sass/blocks/page-main.scss";
+@import "../sass/blocks/container.scss";
 @import "../sass/blocks/page-header.scss";
 @import "../sass/blocks/button.scss";
 @import "../sass/blocks/site-header.scss";
 @import "../sass/blocks/header-contacts.scss";
 @import "../sass/blocks/hero-header.scss";
+@import "../sass/blocks/page-main.scss";
 @import "../sass/blocks/features.scss";
 @import "../sass/blocks/about.scss";
 @import "../sass/blocks/catalog.scss";
@@ -16,4 +17,6 @@
 @import "../sass/blocks/socials.scss";
 @import "../sass/blocks/main-nav.scss";
 @import "../sass/blocks/footer-contacts.scss";
+@import "../sass/blocks/accordion.scss";
+@import "../sass/blocks/overlay.scss";
 @import "../sass/blocks/modal.scss";

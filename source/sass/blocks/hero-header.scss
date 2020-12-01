@@ -43,6 +43,8 @@
 
   display: inline-block;
   margin-top: 93px;
+  margin-bottom: 92px;
+
 
   font-size: 14px;
   line-height: 1.14px;
@@ -73,12 +75,16 @@
 
 @media (max-width: $tablet-width) {
   .hero-header {
-    padding-left: 65px;
+    margin-bottom: auto;
     min-height: 470px;
+    padding-left: 65px;
+    padding-top: 35px;
+    padding-bottom: 35px;
   }
 
   .hero-header h1 {
     margin-bottom: 28px;
+    max-width: 50%;
 
     font-size: 60px;
     line-height: 1.17;
@@ -92,7 +98,7 @@
     line-height: 1.57;
 
     &::before {
-      top: 29%;
+      top: 17px;
 
       width: 33px;
     }
@@ -110,9 +116,11 @@
 
 @media (max-width: $mobile-width) {
   .hero-header {
+    min-height: 291px;
+    margin-bottom: 0;
     padding-left: 0;
-    min-height: 280px;
-    padding-bottom: 0;
+    padding-bottom: 70px;
+    padding-top: 70px;
   }
 
   .hero-header h1 {
@@ -126,13 +134,11 @@
 
   .hero-header p {
     width: auto;
-    max-width: 300px;
     padding-left: 50px;
 
     font-size: 16px;
 
     &::before {
-      top: 23%;
       left: 2px;
     }
   }
@@ -150,6 +156,6 @@
 
   .hero-header__mobile-link {
     display: inline-block;
+    vertical-align: middle;
   }
 }
-

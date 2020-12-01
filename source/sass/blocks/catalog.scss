@@ -3,9 +3,7 @@
 }
 
 .catalog__inner {
-  width: calc(100% - 70px);
   max-width: 1170px;
-  margin: 0 auto;
   padding-top: 89px;
   padding-bottom: 127px;
 }
@@ -23,6 +21,7 @@
   min-height: 620px;
   width: 31.6%;
 
+  background-color: $bg-dark;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -105,9 +104,7 @@
 .catalog__item h3 {
   margin: 0;
   max-width: 58%;
-  padding-top: 51px;
-  padding-left: 44px;
-  padding-bottom: 52px;
+  padding: 51px 0 52px 44px;
 
   font-family: $second-font;
   font-weight: normal;
@@ -119,7 +116,6 @@
   .catalog__inner {
     padding-top: 50px;
     padding-bottom: 78px;
-    width: calc(100% - 50px);
   }
 
   .catalog h2 {
@@ -180,7 +176,6 @@
 @media (max-width: $mobile-width) {
   .catalog__inner {
     padding-bottom: 64px;
-    width: calc(100% - 30px);
   }
 
   .catalog h2 {

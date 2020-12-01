@@ -34,6 +34,14 @@
 
 .footer-contacts__link {
   color: inherit;
+
+  &:hover {
+    color: $font-blue;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
 }
 
 @media (max-width: $tablet-width) {
@@ -54,11 +62,20 @@
     position: relative;
 
     width: 100%;
-    padding-top: 29px;
-    padding-bottom: 28px;
 
     &::before {
       @include pseudo-border-gray;
     }
+  }
+
+  .footer-contacts h2 {
+    padding-top: 29px;
+    padding-bottom: 28px;
+    margin-bottom: 0;
+  }
+
+  .footer-contacts__wrapper {
+    padding-top: 3px;
+    padding-bottom: 27px;
   }
 }
