@@ -109,11 +109,13 @@
 }
 
 .modal__checkbox input:focus + label::before {
-  outline: 2px solid black;
+  outline: 1px solid black;
+  outline: 1px auto -webkit-focus-ring-color;
 }
 
 .modal__checkbox input:checked:focus + label::before {
-  outline: 2px solid black;
+  outline: 1px solid black;
+  outline: 1px auto -webkit-focus-ring-color;
 }
 
 .modal__close {

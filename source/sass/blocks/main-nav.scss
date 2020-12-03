@@ -1,13 +1,10 @@
 .main-nav {
   width: 46%;
-
-  color: rgba($font-dark, 0.5);
 }
 
 .main-nav h2 {
   margin: 0;
   margin-bottom: 25px;
-  margin-left: 3px;
 
   font-family: $second-font;
   font-weight: 400;
@@ -15,10 +12,13 @@
   line-height: 1.07;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+  color: $font-dark;
 }
 
 .main-nav__list {
   display: flex;
+
+  color: rgba($font-dark, 0.5);
 }
 
 .main-nav__col {

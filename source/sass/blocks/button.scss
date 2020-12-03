@@ -117,11 +117,11 @@
 @media (max-width: $mobile-width) {
   .button {
     &--consult {
-      width: auto;
+      width: 100%;
     }
 
     &--feedback {
-      padding-bottom: 15px;
+      padding-bottom: 16px;
     }
   }
 }

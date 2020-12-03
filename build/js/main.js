@@ -2,11 +2,11 @@
 
 // Модальное окно //
 
-var ESC_KEYCODE = 27;
 var popup = document.querySelector('.modal');
 var callbackButton = document.querySelector('.button--call-back');
 var overlay = document.querySelector('.overlay');
 var username = popup.querySelector('#name');
+var closeButton = document.querySelector('.modal__close');
 
 
 var openPopup = function () {
@@ -14,12 +14,14 @@ var openPopup = function () {
   overlay.classList.remove('overlay--hidden');
   document.querySelector('body').classList.add('modal--open');
   username.focus();
+  document.addEventListener('keydown', onPopupEscPress);
 };
 
 var closePopup = function () {
   popup.classList.remove('modal--show');
   overlay.classList.add('overlay--hidden');
   document.querySelector('body').classList.remove('modal--open');
+  document.removeEventListener('keydown', onPopupEscPress);
 };
 
 callbackButton.addEventListener('click', function (evt) {
@@ -27,21 +29,17 @@ callbackButton.addEventListener('click', function (evt) {
   openPopup();
 });
 
-var closeButton = document.querySelector('.modal__close');
-
 closeButton.addEventListener('click', function (evt) {
   evt.preventDefault();
   closePopup();
 });
 
-window.addEventListener('keydown', function (evt) {
-  if (evt.code === ESC_KEYCODE) {
-    if (popup.classList.contains('modal--show')) {
-      evt.preventDefault();
-      closePopup();
-    }
+var onPopupEscPress = function (evt) {
+  if (evt.key === 'Escape') {
+    evt.preventDefault();
+    closePopup();
   }
-});
+};
 
 overlay.addEventListener('click', function () {
   closePopup();
@@ -56,19 +54,19 @@ var isStorageSupport = true;
 var storage = {};
 
 try {
-  storage.name = localStorage.getItem('userName');
-  storage.phone = localStorage.getItem('userPhone');
-  storage.question = localStorage.getItem('userQuestion');
+  storage.username = localStorage.getItem('username');
+  storage.phone = localStorage.getItem('phone');
+  storage.question = localStorage.getItem('question');
 } catch (err) {
   isStorageSupport = false;
 }
 
 popup.addEventListener('submit', function (evt) {
-  if (!name.value || !phone.value || !question.value) {
+  if (!username.value || !phone.value || !question.value) {
     evt.preventDefault();
   } else {
     if (isStorageSupport) {
-      localStorage.setItem('name', name.value);
+      localStorage.setItem('username', username.value);
       localStorage.setItem('phone', phone.value);
       localStorage.setItem('question', question.value);
     }
@@ -86,7 +84,6 @@ accordionItems.forEach(function (elem) {
   elem.classList.remove('accordion__item--nojs');
 });
 
-
 accordions.forEach(function (elem) {
   elem.addEventListener('click', function () {
     elem.parentNode.classList.toggle('accordion__item--active');
@@ -98,39 +95,38 @@ accordions.forEach(function (elem) {
 
 /* eslint-disable */
 
-window.addEventListener("DOMContentLoaded", function () {
+window.addEventListener('DOMContentLoaded', function () {
   [].forEach.call(document.querySelectorAll('[type=tel]'), function (input) {
     var keyCode;
     function mask(event) {
       event.keyCode && (keyCode = event.keyCode);
       var pos = this.selectionStart;
       if (pos < 3) event.preventDefault();
-      var matrix = "+7 (___) ___ ____",
-        //'+7(___)___-__-__';
+      var matrix = '+7 (___) ___ ____',
         i = 0,
-        def = matrix.replace(/\D/g, ""),
-        val = this.value.replace(/\D/g, ""),
+        def = matrix.replace(/\D/g, ''),
+        val = this.value.replace(/\D/g, ''),
         new_value = matrix.replace(/[_\d]/g, function (a) {
           return i < val.length ? val.charAt(i++) || def.charAt(i) : a
         });
-      i = new_value.indexOf("_");
+      i = new_value.indexOf('_');
       if (i != -1) {
         i < 5 && (i = 4);
         new_value = new_value.slice(0, i)
       }
       var reg = matrix.substr(0, this.value.length).replace(/_+/g,
         function (a) {
-          return "\\d{1," + a.length + "}"
-        }).replace(/[+()]/g, "\\$&");
-      reg = new RegExp("^" + reg + "$");
+          return '\\d{1,' + a.length + '}'
+        }).replace(/[+()]/g, '\\$&');
+      reg = new RegExp('^' + reg + '$');
       if (!reg.test(this.value) || this.value.length < 5 || keyCode > 47 && keyCode < 58) this.value = new_value;
-      if (event.type == "blur" && this.value.length < 5) this.value = ""
+      if (event.type == 'blur' && this.value.length < 5) this.value = ''
     }
 
-    input.addEventListener("input", mask, false);
-    input.addEventListener("focus", mask, false);
-    input.addEventListener("blur", mask, false);
-    input.addEventListener("keydown", mask, false)
+    input.addEventListener('input', mask, false);
+    input.addEventListener('focus', mask, false);
+    input.addEventListener('blur', mask, false);
+    input.addEventListener('keydown', mask, false)
 
   });
 });

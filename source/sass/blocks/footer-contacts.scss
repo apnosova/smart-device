@@ -1,15 +1,12 @@
 .footer-contacts {
   width: 40%;
   max-width: 335px;
-
-  color: rgba($font-dark, 0.5);
 }
 
 .footer-contacts__wrapper {
   font-size: 15px;
   line-height: 1.67;
-
-  color: ($font-dark, 0.5);
+  color: rgba($font-dark, 0.5);
 }
 
 .footer-contacts__list {
@@ -26,6 +23,7 @@
   line-height: 1.07;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+  color: $font-dark;
 }
 
 .footer-contacts p {
@@ -69,13 +67,14 @@
   }
 
   .footer-contacts h2 {
-    padding-top: 29px;
+    padding-top: 27px;
     padding-bottom: 28px;
     margin-bottom: 0;
+    margin-left: 0;
   }
 
   .footer-contacts__wrapper {
-    padding-top: 3px;
-    padding-bottom: 27px;
+    padding-top: 5px;
+    padding-bottom: 28px;
   }
 }

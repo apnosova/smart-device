@@ -9,33 +9,35 @@
 
   .accordion__button {
     position: absolute;
-    top: 29px;
-    right: 2px;
+    top: 0;
+    left: 0;
 
     display: block;
-    width: 16px;
-    height: 16px;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    height: 73px;
 
     background-color: transparent;
     border: none;
 
+    &:active {
+      background-color: rgba($dark-bluish-gray, 0.1);
+    }
+
     &::before {
-      @include pseudo(7px, 0, 16px, 1px);
+      @include pseudo(35px, auto, 16px, 1px);
+      right: 17px;
 
       background-color: #c4c4c4;
     }
 
     &::after {
-      @include pseudo(7px, 0, 16px, 1px);
+      @include pseudo(35px, auto, 16px, 1px);
+      right: 17px;
 
       background-color: #c4c4c4;
 
       transform: rotate(90deg);
-    }
-
-    &:active::before,
-    &:active::after {
-      background-color: $bg-blue;
     }
   }
 
