@@ -7,7 +7,7 @@
 
 @font-face {
   font-family: "Roboto Condensed";
-  src: url("../fonts/robotocondensed-regular.woff2") format("woff2"), url("../robotocondensed-regular.woff") format("woff");
+  src: url("../fonts/robotocondensed-regular.woff2") format("woff2"), url("../fonts/robotocondensed-regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap; }
@@ -1028,19 +1028,23 @@ img {
   cursor: pointer; }
 
 .feedback__checkbox input:focus + label::before {
-  outline: 1px solid black;
-  outline: 1px auto -webkit-focus-ring-color; }
+  outline: 1px solid black; }
 
 .feedback__checkbox input:checked:focus + label::before {
-  outline: 1px solid black;
-  outline: 1px auto -webkit-focus-ring-color; }
+  outline: 1px solid black; }
 
 .feedback input:hover,
 .feedback textarea:hover {
-  outline: 1px solid #ffffff; }
+  background-color: rgba(255, 255, 255, 0.2); }
 
 .feedback__checkbox input:hover + label {
   color: white; }
+
+.feedback__checkbox input:hover + label::before {
+  background-color: rgba(255, 255, 255, 0.1); }
+
+.feedback__checkbox input:checked:hover + label::before {
+  background-color: rgba(255, 255, 255, 0.1); }
 
 @media (max-width: 1023px) {
   .feedback {
@@ -1592,6 +1596,10 @@ img {
   padding: 13px 24px;
   overflow: auto; }
 
+.modal input:hover,
+.modal textarea:hover {
+  background-color: rgba(255, 255, 255, 0.2); }
+
 .modal__button {
   margin-bottom: 35px; }
 
@@ -1633,12 +1641,19 @@ img {
   cursor: pointer; }
 
 .modal__checkbox input:focus + label::before {
-  outline: 1px solid black;
-  outline: 1px auto -webkit-focus-ring-color; }
+  outline: 1px solid black; }
 
 .modal__checkbox input:checked:focus + label::before {
-  outline: 1px solid black;
-  outline: 1px auto -webkit-focus-ring-color; }
+  outline: 1px solid black; }
+
+.modal__checkbox input:hover + label::before {
+  background-color: rgba(255, 255, 255, 0.1); }
+
+.modal__checkbox input:checked:hover + label::before {
+  background-color: rgba(255, 255, 255, 0.1); }
+
+.modal__checkbox input:hover + label {
+  color: white; }
 
 .modal__close {
   position: absolute;
@@ -1667,10 +1682,3 @@ img {
             transform: rotate(45deg); }
   .modal__close:hover::before, .modal__close:hover::after {
     background-color: #1b2d37; }
-
-.modal input:hover,
-.modal textarea:hover {
-  outline: 1px solid #ffffff; }
-
-.modal__checkbox input:hover + label {
-  color: white; }

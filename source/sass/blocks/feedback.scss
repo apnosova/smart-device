@@ -110,21 +110,29 @@
 
 .feedback__checkbox input:focus + label::before {
   outline: 1px solid black;
-  outline: 1px auto -webkit-focus-ring-color;
+  //outline: 1px auto -webkit-focus-ring-color;
 }
 
 .feedback__checkbox input:checked:focus + label::before {
   outline: 1px solid black;
-  outline: 1px auto -webkit-focus-ring-color;
+  //outline: 1px auto -webkit-focus-ring-color;
 }
 
 .feedback input:hover,
 .feedback textarea:hover {
-  outline: 1px solid $bg-white;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .feedback__checkbox input:hover + label {
   color: rgba(255, 255, 255, 1);
+}
+
+.feedback__checkbox input:hover + label::before {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.feedback__checkbox input:checked:hover + label::before {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 @media (max-width: $tablet-width) {
