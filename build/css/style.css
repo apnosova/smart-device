@@ -75,11 +75,6 @@ img {
   clip: rect(0 0 0 0);
   overflow: hidden; }
 
-svg path {
-  fill: inherit;
-  stroke: inherit;
-  stroke-width: inherit; }
-
 .container {
   width: calc(100% - 70px);
   margin: 0 auto; }
@@ -1321,10 +1316,10 @@ svg path {
 .socials__item:not(:last-child) {
   margin-right: 15px; }
 
-.socials__link {
+.socials__link svg {
   fill: #cdcdcd; }
 
-.socials__link:hover {
+.socials__link:hover svg {
   fill: #00b2ff; }
 
 .socials__link:active {
