@@ -20,9 +20,9 @@
     });
   });
 
-  var closePanel = function (elem) {
+  var closePanel = function (item) {
 
-    var context = elem.parentNode;
+    var context = item.parentNode;
 
     [].forEach.call(accordionItems, function (elem) {
       if (elem !== context) {
