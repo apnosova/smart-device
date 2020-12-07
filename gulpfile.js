@@ -54,8 +54,8 @@ gulp.task('refresh', function (done) {
 gulp.task('images', function () {
   return gulp.src('source/img/**/*.{png,jpg,svg}')
     .pipe(imagemin([
-      imagemin.optipng({optimizationLevel: 3}),
-      imagemin.mozjpeg({quality: 90, progressive: true}),
+      imagemin.optipng({optimizationLevel: 5}),
+      imagemin.mozjpeg({quality: 80, progressive: true}),
       imagemin.svgo()
     ]))
 

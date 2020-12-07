@@ -2,7 +2,6 @@
   @include list-reset;
   display: flex;
   flex-wrap: wrap;
-  margin-left: auto;
 }
 
 .socials__item {
@@ -21,4 +20,16 @@
 
 .socials__link:active {
   opacity: 0.8;
+}
+
+@media (max-width: $tablet-width) {
+  .socials {
+    margin-left: auto;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .socials {
+    margin-left: 0;
+  }
 }

@@ -1319,8 +1319,7 @@ img {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin-left: auto; }
+      flex-wrap: wrap; }
 
 .socials__item:not(:last-child) {
   margin-right: 15px; }
@@ -1333,6 +1332,14 @@ img {
 
 .socials__link:active {
   opacity: 0.8; }
+
+@media (max-width: 1023px) {
+  .socials {
+    margin-left: auto; } }
+
+@media (max-width: 767px) {
+  .socials {
+    margin-left: 0; } }
 
 .main-nav {
   width: 46%; }
