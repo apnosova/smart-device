@@ -108,7 +108,7 @@
     }
 
     &--feedback {
-      padding-bottom: 15px;
+      padding-bottom: 16px;
       width: 280px;
     }
   }
@@ -117,11 +117,12 @@
 @media (max-width: $mobile-width) {
   .button {
     &--consult {
-      width: 100%;
+      width: 287px;
     }
 
     &--feedback {
       padding-bottom: 16px;
+      width: 100%;
     }
   }
 }

@@ -15,6 +15,7 @@ var svgstore = require('gulp-svgstore');
 var posthtml = require('gulp-posthtml');
 var include = require('posthtml-include');
 var del = require('del');
+var groupConcat = require('gulp-group-concat');
 var concat = require('gulp-concat');
 
 gulp.task('css', function () {
@@ -84,9 +85,17 @@ gulp.task('html', function () {
     .pipe(gulp.dest('build'));
 });
 
+//gulp.task('js', function () {
+//return gulp.src('source/js/**/*.js')
+//.pipe(groupConcat({
+//'main.js': 'source/js/main/**/*.js',
+//'vendor.js': 'source/js/vendor/**/*.js'
+//}))
+//.pipe(gulp.dest('build/js'));
+//});
+
 gulp.task('js', function () {
   return gulp.src('source/js/*.js')
-    .pipe(concat('main.js'))
     .pipe(gulp.dest('build/js'));
 });
 
@@ -94,7 +103,9 @@ gulp.task('copy', function () {
   return gulp.src([
     'source/fonts/**/*.{woff,woff2}',
     'source/img/**',
-    'source//*.ico'
+    'source//*.ico',
+
+    'source/js/**',
   ], {
     base: 'source'
   })

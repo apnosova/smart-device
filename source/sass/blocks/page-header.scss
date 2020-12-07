@@ -22,9 +22,9 @@
   .page-header {
     background-color: $bg-dark;
     background-image: url("../img/header-bg-tablet@1x.png"), url("../img/circuit-boards-tablet@1x.png"), url("../img/header-triangular-bg-tablet.svg");
-    background-position: center, calc(50% + 357px) 32.5%, calc(50% + 325px) -38px;
+    background-position: center, calc(50% + 357px) 32.5%, calc(50% + 320px) -20px;
     background-repeat: no-repeat;
-    background-size: cover, 465px 340px, 557px 504px;
+    background-size: cover, 465px 340px, 528px 505px;
     transform: none, none, rotate(-25deg);
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {

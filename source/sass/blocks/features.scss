@@ -1,7 +1,7 @@
 .features {
   max-width: 1170px;
   padding-top: 109px;
-  padding-bottom: 55px;
+  padding-bottom: 27px;
 }
 
 .features__list {
@@ -11,13 +11,10 @@
 }
 
 .features__item {
-  padding: 39px 42px 68px;
+  padding: 41px 42px 64px;
   width: 48.68%;
   min-height: 299px;
-
-  &:not(:nth-last-child(-n+2)) {
-    margin-bottom: 29px;
-  }
+  margin-bottom: 30px;
 
   &:not(:nth-child(2n)) {
     margin-right: 2.6%;
@@ -28,10 +25,8 @@
   border-left: 3px solid $bg-blue;
   fill: $bg-blue;
 
-  cursor: pointer;
-
   &--private {
-    padding-top: 44px;
+    padding-top: 45px;
   }
 
   &:hover {
@@ -51,7 +46,7 @@
 
 .features__item h3 {
   margin: 0;
-  margin-bottom: 16px;
+  margin-bottom: 15px;
 
   font-family: $second-font;
   font-weight: 400;
@@ -64,26 +59,26 @@
   margin: 0;
 
   color: $font-gray;
+  line-height: 1.35;
 }
 
 .features__item svg {
-  margin-bottom: 15px;
+  display: block;
+  margin-bottom: 20px;
 }
 
 @media (max-width: $tablet-width) {
   .features {
     padding-top: 54px;
-    padding-bottom: 30px;
+    padding-bottom: 0;
   }
 
   .features__item {
-    padding: 22px 21px 23px 23px;
+    padding: 23px 20px 21px 24px;
     width: 48%;
     min-height: 232px;
 
-    &:not(:nth-last-child(-n+2)) {
-      margin-bottom: 30px;
-    }
+    margin-bottom: 31px;
 
     &:not(:nth-child(2n)) {
       margin-right: 4%;
@@ -95,7 +90,7 @@
   }
 
   .features__item h3 {
-    margin-bottom: 9px;
+    margin-bottom: 10px;
   }
 
   .features__item--private h3 {
@@ -103,31 +98,43 @@
   }
 
   .features__item svg {
-    margin-bottom: 5px;
+    margin-bottom: 8px;
   }
 
-  .features__item--large svg,
-  .features__item--personal svg {
+  .features__item--large svg {
     width: 32px;
-    height: 33px;
+    height: 32px;
+    margin-bottom: 10px;
   }
 
   .features__item--private svg {
     width: 30px;
     height: 26px;
+    margin-bottom: 12px;
+  }
+
+  .features__item--personal svg {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 12px;
+  }
+
+  .features__item--personal h3 {
+    margin-bottom: 7px;
   }
 }
 
 @media (max-width: $mobile-width) {
   .features {
     padding-top: 37px;
+    padding-bottom: 30px;
     min-height: auto;
   }
 
   .features__item {
     padding-top: 24px;
-    padding-bottom: 27px;
-    padding-right: 13px;
+    padding-bottom: 26px;
+    padding-right: 12px;
 
     margin-bottom: 0;
     width: 100%;
@@ -141,11 +148,11 @@
     }
 
     &--private {
-      padding-top: 25px;
+      padding-top: 23px;
     }
 
     &--large {
-      padding-bottom: 30px;
+      padding-bottom: 32px;
     }
 
     &--personal {
@@ -155,7 +162,6 @@
 
   .features__item h3 {
     margin-bottom: 10px;
-    max-width: 99%;
 
     font-size: 20px;
     line-height: 1.4;
@@ -166,11 +172,11 @@
   }
 
   .features__item svg {
-    margin-bottom: 6px;
+    margin-bottom: 12px;
   }
 
   .features__item--large h3 {
-    margin-bottom: 8px;
+    margin-bottom: 9px;
   }
 
   .features__item--private h3 {
@@ -178,6 +184,6 @@
   }
 
   .features__item--personal h3 {
-    margin-bottom: 17px;
+    margin-bottom: 16px;
   }
 }

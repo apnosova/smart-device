@@ -1,10 +1,11 @@
+
 'use strict';
 
-// Добавление маски для ввода телефона
+/* eslint-disable */
 
 (function () {
 
-  /* eslint-disable */
+
 
   window.addEventListener('DOMContentLoaded', function () {
     [].forEach.call(document.querySelectorAll('[type=tel]'), function (input) {
@@ -13,7 +14,7 @@
         event.keyCode && (keyCode = event.keyCode);
         var pos = this.selectionStart;
         if (pos < 3) event.preventDefault();
-        var matrix = '+7 (___) ___ ____',
+        var matrix = '+7(___)___-__-__',
           i = 0,
           def = matrix.replace(/\D/g, ''),
           val = this.value.replace(/\D/g, ''),
@@ -22,7 +23,7 @@
           });
         i = new_value.indexOf('_');
         if (i != -1) {
-          i < 5 && (i = 4);
+          i < 5 && (i = 3);
           new_value = new_value.slice(0, i)
         }
         var reg = matrix.substr(0, this.value.length).replace(/_+/g,

@@ -10,8 +10,8 @@
   overflow: auto;
 
   background-color: rgba(0, 0, 0, 0.5);
-}
 
-.overlay--hidden {
-  display: none;
+  &--hidden {
+    display: none;
+  }
 }

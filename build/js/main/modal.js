@@ -1,6 +1,5 @@
-'use strict';
 
-// Модальное окно //
+'use strict';
 
 (function () {
 
@@ -64,7 +63,7 @@
   }
 
   popup.addEventListener('submit', function (evt) {
-    if (!username.value || !phone.value || !question.value) {
+    if (!username.value || !phone.value) {
       evt.preventDefault();
     } else {
       if (isStorageSupport) {

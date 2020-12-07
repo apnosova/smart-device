@@ -1,12 +1,8 @@
 .site-header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  min-height: 118px;
-}
-
-.site-header__logo {
-  margin-right: 45px;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .site-header__logo-img {
@@ -15,27 +11,20 @@
   height: 52px;
 }
 
-.site-header__logo-circuit {
-  display: none;
-}
-
 @media (max-width: $tablet-width) {
   .site-header {
-    min-height: 92px;
-  }
-
-  .site-header__logo {
-    margin-right: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 }
 
 @media (max-width: $mobile-width) {
   .site-header {
-    min-height: 72px;
+    padding-top: 17px;
+    padding-bottom: 17px;
   }
 
   .site-header__logo-img {
-    display: block;
     width: 38px;
     height: 38px;
   }

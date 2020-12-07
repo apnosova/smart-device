@@ -1,7 +1,7 @@
 .about {
   position: relative;
 
-  padding: 50px 0 110px 180px;
+  padding: 50px 0 109px 180px;
   max-width: 1170px;
 
   &::before {
@@ -30,19 +30,20 @@
   max-width: 98%;
 
   &:not(:last-of-type) {
-    margin-bottom: 22px;
+    margin-bottom: 21px;
   }
 
   color: $font-gray;
+  line-height: 1.35;
 }
 
 .about__button {
-  margin-top: 40px;
+  margin-top: 39px;
 }
 
 @media (max-width: $tablet-width) {
   .about {
-    padding: 26px 0 83px 186px;
+    padding: 26px 0 82px 186px;
 
     &::before {
       top: 25px;
@@ -76,7 +77,7 @@
 
 @media (max-width: $mobile-width) {
   .about {
-    padding: 28px 0 65px;
+    padding: 28px 0 64px;
 
     &::before {
       background-image: none;
@@ -88,12 +89,15 @@
   }
 
   .about p {
+    padding-left: 2px;
+
     &:not(:last-of-type) {
       margin-bottom: 43px;
     }
   }
 
   .about__button {
-    margin-top: 30px;
+    margin-top: 31px;
+    margin-left: 2px;
   }
 }

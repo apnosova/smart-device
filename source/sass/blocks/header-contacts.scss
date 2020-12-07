@@ -2,7 +2,6 @@
   position: relative;
 
   display: flex;
-  align-items: center;
   width: 77.5%;
 
   fill: $bg-blue;
@@ -13,13 +12,6 @@
 
   width: 37px;
   height: 13px;
-
-  &::before {
-    @include pseudo (0, 0, 37px, 1px);
-
-    background-color: $bg-white;
-    box-shadow: 0 12px 0 0 $bg-white;
-  }
 }
 
 .header-contacts__list {
@@ -33,6 +25,7 @@
 
 .header-contacts__item {
   padding: 14px;
+  padding-top: 12px;
 
   line-height: 1.13;
 
@@ -60,21 +53,22 @@
 .header-contacts__link span {
   display: inline-block;
   vertical-align: middle;
-  padding-bottom: 2px;
 }
 
 .header-contacts__link--envelope svg {
   margin-right: 10px;
-  margin-top: 4px;
+  margin-bottom: -3px;
 }
 
 .header-contacts__link--phone svg {
   margin-right: 7px;
-  margin-bottom: -4px;
+  margin-bottom: -5px;
 }
 
 .header-contacts__button {
   margin-left: 3.2%;
+  margin-top: 5px;
+  margin-bottom: auto;
 }
 
 @media (max-width: $tablet-width) {

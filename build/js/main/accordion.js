@@ -1,6 +1,5 @@
-'use strict';
 
-// Аккордеон //
+'use strict';
 
 (function () {
 
@@ -15,6 +14,15 @@
   accordions.forEach(function (elem) {
     elem.addEventListener('click', function () {
       elem.parentNode.classList.toggle('accordion__item--active');
+
+      var context = elem.parentNode;
+
+      accordionItems.forEach(function (item) {
+        if (item !== context) {
+          elem.classList.remove('accordion__item--active');
+        }
+      });
+
     });
   });
 
