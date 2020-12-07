@@ -1245,10 +1245,11 @@ img {
       background-color: rgba(98, 105, 98, 0.2); }
   .page-footer__logo {
     margin-bottom: 0;
-    margin-right: 14px; }
+    margin-right: auto; }
   .page-footer__wrapper p {
     display: block;
     margin: 0;
+    margin-left: 14px;
     font-size: 13px;
     line-height: 1.85;
     letter-spacing: 0.04em;
@@ -1318,7 +1319,8 @@ img {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
+      flex-wrap: wrap;
+  margin-left: auto; }
 
 .socials__item:not(:last-child) {
   margin-right: 15px; }
