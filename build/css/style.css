@@ -329,7 +329,7 @@ img {
     padding: 0; }
     .header-contacts__item:not(:first-child) {
       margin-left: 33px; }
-  .header-contacts__link:active {
+  .header-contacts__link svg:active {
     fill: #ffffff; }
   .header-contacts__link span {
     display: none; }
@@ -1245,7 +1245,8 @@ img {
       background-color: rgba(98, 105, 98, 0.2); }
   .page-footer__logo {
     margin-bottom: 0;
-    margin-right: 14px; }
+    margin-right: 14px;
+    width: 30%; }
   .page-footer__wrapper p {
     display: block;
     margin: 0;
@@ -1401,7 +1402,7 @@ img {
       margin-left: calc(50% - 50vw);
       background-color: rgba(98, 105, 98, 0.2); }
   .main-nav h2 {
-    padding: 28px 15px;
+    padding: 28px 0;
     margin-bottom: 0; }
   .main-nav__list {
     padding-top: 0;
@@ -1465,7 +1466,7 @@ img {
       margin-left: calc(50% - 50vw);
       background-color: rgba(98, 105, 98, 0.2); }
   .footer-contacts h2 {
-    padding: 28px 15px 27px;
+    padding: 28px 0 27px;
     margin-bottom: 0;
     margin-left: 0; }
   .footer-contacts__wrapper {

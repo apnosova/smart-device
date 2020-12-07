@@ -23,7 +23,7 @@
           });
         i = new_value.indexOf('_');
         if (i != -1) {
-          i < 5 && (i = 3);
+          i < 3 && (i = 3);
           new_value = new_value.slice(0, i)
         }
         var reg = matrix.substr(0, this.value.length).replace(/_+/g,

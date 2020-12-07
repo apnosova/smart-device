@@ -16,7 +16,6 @@ var posthtml = require('gulp-posthtml');
 var include = require('posthtml-include');
 var del = require('del');
 var groupConcat = require('gulp-group-concat');
-var concat = require('gulp-concat');
 
 gulp.task('css', function () {
   return gulp.src('source/sass/style.scss')
@@ -44,7 +43,7 @@ gulp.task('server', function () {
   gulp.watch('source/sass/**/*.{scss,sass}', gulp.series('css'));
   gulp.watch('source/img/icon-*.svg', gulp.series('sprite', 'html', 'refresh'));
   gulp.watch('source/*.html', gulp.series('html', 'refresh'));
-  gulp.watch('source/js/*.js', gulp.series('js', 'refresh'));
+  gulp.watch('source/js/**/*.js', gulp.series('js', 'refresh'));
 });
 
 gulp.task('refresh', function (done) {
@@ -85,17 +84,12 @@ gulp.task('html', function () {
     .pipe(gulp.dest('build'));
 });
 
-//gulp.task('js', function () {
-//return gulp.src('source/js/**/*.js')
-//.pipe(groupConcat({
-//'main.js': 'source/js/main/**/*.js',
-//'vendor.js': 'source/js/vendor/**/*.js'
-//}))
-//.pipe(gulp.dest('build/js'));
-//});
-
 gulp.task('js', function () {
-  return gulp.src('source/js/*.js')
+  return gulp.src('source/js/**/*.js')
+    .pipe(groupConcat({
+      'main.js': 'source/js/main/**/*.js',
+      'vendor.js': 'source/js/vendor/**/*.js'
+    }))
     .pipe(gulp.dest('build/js'));
 });
 
@@ -104,8 +98,6 @@ gulp.task('copy', function () {
     'source/fonts/**/*.{woff,woff2}',
     'source/img/**',
     'source//*.ico',
-
-    'source/js/**',
   ], {
     base: 'source'
   })

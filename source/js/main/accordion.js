@@ -7,23 +7,29 @@
 
   var accordions = document.querySelectorAll('.accordion__button');
 
-  accordionItems.forEach(function (elem) {
-    elem.classList.remove('accordion__item--nojs');
+  [].forEach.call(accordionItems, function (item) {
+    item.classList.remove('accordion__item--nojs');
   });
 
-  accordions.forEach(function (elem) {
+  [].forEach.call(accordions, function (elem) {
     elem.addEventListener('click', function () {
       elem.parentNode.classList.toggle('accordion__item--active');
 
-      var context = elem.parentNode;
-
-      accordionItems.forEach(function (item) {
-        if (item !== context) {
-          elem.classList.remove('accordion__item--active');
-        }
-      });
+      closePanel(elem);
 
     });
   });
+
+  var closePanel = function (elem) {
+
+    var context = elem.parentNode;
+
+    [].forEach.call(accordionItems, function (elem) {
+      if (elem !== context) {
+        elem.classList.remove('accordion__item--active');
+      }
+    });
+  };
+
 
 })();
